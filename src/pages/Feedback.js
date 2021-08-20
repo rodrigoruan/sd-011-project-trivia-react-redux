@@ -27,10 +27,14 @@ class Feedback extends Component {
         <section>
           { this.renderFeedbackMessage() }
           <div>
-            <p>Score: </p>
-            <p data-testid="feedback-total-score">{ score }</p>
-            <p>Acertos: </p>
-            <p data-testid="feedback-total-question">{ assertions }</p>
+            <span>Score: </span>
+            <span data-testid="feedback-total-score">{ score }</span>
+            {' '}
+            <br />
+            <span>Acertos: </span>
+            <span data-testid="feedback-total-question">{ assertions }</span>
+            {' '}
+            <br />
             <Link to="/">
               <button type="button" data-testid="btn-play-again">Jogar novamente</button>
             </Link>

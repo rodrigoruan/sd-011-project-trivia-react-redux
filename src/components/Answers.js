@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as actions from '../redux/actions';
+import '../css/Game.css';
 
 class Answers extends Component {
   constructor() {
@@ -153,9 +154,9 @@ class Answers extends Component {
 
   render() {
     return (
-      <>
+      <div className="container-answers-buttons">
         { this.renderAwnserButtons() }
-      </>
+      </div>
     );
   }
 }

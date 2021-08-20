@@ -1,0 +1,13 @@
+.header-container {
+  align-items: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  height: 125px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.header-picture-circle {
+  border-radius: 50%;
+}

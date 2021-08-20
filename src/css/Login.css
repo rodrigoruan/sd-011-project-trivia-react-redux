@@ -1,37 +1,64 @@
-.login {
-  align-self: center;
-  background-color: white;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.total-page {
+  background-color: rgb(148, 104, 16);
+  display: flex;
+  height: 640px;
+  width: 100%;
+}
+
+.login-container {
+  background-color: wheat;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: auto;
-  padding: 4%;
-  width: fit-content;
+  height: 475px;
+  justify-content: space-around;
+  width: 450px;
 }
 
-.input {
-  align-self: center;
-  flex-direction: column;
-  padding: 0.5%;
-}
-
-.App-logo {
-  width: 800px;
-}
-
-.App-header {
+.login-header-container {
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-family: fantasy;
-  justify-content: center;
+  height: 280px;
+  justify-content: space-around;
 }
 
-button {
-  border-radius: 10%;
+.login-logo {
+  height: 200px;
+  width: 425px;
+}
+
+.login-text {
+  font-weight: 700;
 }
 
 input {
-  border-radius: 10%;
-  width: 200px;
+  padding: 8px 20px;
+  width: 150px;
+}
+
+button {
+  background-color: rgb(201, 145, 42);
+  border: none;
+  color: white;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 150px;
+}
+
+button:disabled {
+  background-color: rgb(226, 194, 134);
+}
+
+.butons-login-container {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
 }

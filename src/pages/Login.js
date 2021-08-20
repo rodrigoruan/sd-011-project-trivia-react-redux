@@ -76,9 +76,9 @@ class Login extends React.Component {
 
   renderHeader() {
     return (
-      <header className="App-header">
-        <img src={ logo } className="App-logo" alt="logo" />
-        <p> SUA VEZ </p>
+      <header className="login-header-container">
+        <img src={ logo } className="login-logo" alt="logo" />
+        <p className="login-text"> SUA VEZ </p>
       </header>
     );
   }
@@ -118,30 +118,32 @@ class Login extends React.Component {
       );
     }
     return (
-      <section className="login">
-        {this.renderHeader()}
-        {this.renderLogin()}
-        <div className="input">
-          <p>
-            <button
-              type="button"
-              data-testid="btn-play"
-              disabled={ !statusEmail || !statusName }
-              onClick={ this.startGame }
-            >
-              Jogar
-            </button>
-            <Link to="/config">
+      <div className="total-page">
+        <section className="login-container">
+          {this.renderHeader()}
+          {this.renderLogin()}
+          <div className="input">
+            <p className="butons-login-container">
               <button
                 type="button"
-                data-testid="btn-settings"
+                data-testid="btn-play"
+                disabled={ !statusEmail || !statusName }
+                onClick={ this.startGame }
               >
-                Configurações
+                Jogar
               </button>
-            </Link>
-          </p>
-        </div>
-      </section>
+              <Link to="/config">
+                <button
+                  type="button"
+                  data-testid="btn-settings"
+                >
+                  Configurações
+                </button>
+              </Link>
+            </p>
+          </div>
+        </section>
+      </div>
     );
   }
 }

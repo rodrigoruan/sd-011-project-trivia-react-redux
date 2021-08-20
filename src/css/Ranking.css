@@ -1,14 +1,40 @@
-.Ranking {
+.header-ranking {
+  background-color: black;
+  color: white;
+  display: flex;
+  font-size: 45px;
+  justify-content: center;
+  padding: 1%;
+  width: 100%;
+}
+
+.ranking-data-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+
+.ranking-card {
   align-items: center;
-  border-color: indigo;
-  border-style: groove;
+  border: 2px solid rgb(155, 143, 143);
+  box-shadow: 2px 2px rgb(180, 176, 176);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 3%;
-  padding: 2%;
+  height: 200px;
+  justify-content: space-around;
+  margin-bottom: 4%;
+  width: 300px;
 }
 
 ul li {
   list-style: none;
+}
+
+.user-image {
+  border-radius: 50%;
+}
+
+.button-play-again {
+  margin-bottom: 4%;
+  margin-left: 44%;
 }

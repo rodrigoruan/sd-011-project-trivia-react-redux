@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { MD5 } from 'crypto-js';
+import '../css/Header.css';
 
 function Header() {
   const state = JSON.parse(localStorage.getItem('state'));
@@ -9,12 +10,12 @@ function Header() {
   const emailHash = MD5(email);
 
   return (
-    <header className="header">
+    <header className="header-container">
       <img
         data-testid="header-profile-picture"
         src={ `https://www.gravatar.com/avatar/${emailHash}` }
         alt="foto do usuario"
-        className="header-picture"
+        className="header-picture-circle"
       />
 
       <h2

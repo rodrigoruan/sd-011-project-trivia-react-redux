@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import * as actions from '../redux/actions';
 import Answers from './Answers';
+import '../css/Game.css';
 
 class Question extends Component {
   constructor() {
@@ -67,11 +68,13 @@ class Question extends Component {
   render() {
     const { questionsArr, currentQuestion, timer, answerPicked } = this.props;
     return (
-      <div>
-        <p data-testid="question-text">
+      <div className="question-container">
+        <p data-testid="question-text" className="text-game">
+          <p className="question-bold">Question </p>
           { this.decodeHtml(questionsArr[currentQuestion].question) }
         </p>
-        <p data-testid="question-category">
+        <p data-testid="question-category" className="text-game">
+          <p className="question-bold">Category </p>
           { this.decodeHtml(questionsArr[currentQuestion].category) }
         </p>
         <Answers />
