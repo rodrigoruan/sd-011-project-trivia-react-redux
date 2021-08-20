@@ -1,0 +1,10 @@
+.game {
+  align-items: center;
+  border-color: indigo;
+  border-style: double;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3%;
+  padding: 2%;
+}

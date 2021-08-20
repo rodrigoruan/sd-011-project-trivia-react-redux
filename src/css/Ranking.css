@@ -1,0 +1,14 @@
+.Ranking {
+  align-items: center;
+  border-color: indigo;
+  border-style: groove;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3%;
+  padding: 2%;
+}
+
+ul li {
+  list-style: none;
+}
