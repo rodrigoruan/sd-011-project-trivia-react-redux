@@ -39,8 +39,6 @@ class Login extends React.Component {
     );
   }
 
-  // Lógica do click
-
   async handleClick() {
     const { userName, email } = this.state;
     const { sendUserData } = this.props;
@@ -52,68 +50,84 @@ class Login extends React.Component {
     history.push('/game');
   }
 
-  render() {
-    const { userName, email, disabled } = this.state;
+  headerImg() {
+    return (
+      <img
+        src="assets/logo.png"
+        className="login-logo"
+        alt="logo trivia star"
+      />
+    );
+  }
 
+  userFormLogin() {
+    const { userName, email, disabled } = this.state;
+    return (
+      <form className="login-form">
+        <label className="login-label" htmlFor="name">
+          NAME:
+          <input
+            className="login-input"
+            type="text"
+            id="name"
+            name="userName"
+            value={ userName }
+            data-testid="input-player-name"
+            onChange={ this.handleChange }
+          />
+        </label>
+        <label className="login-label" htmlFor="email">
+          EMAIL:
+          <input
+            className="login-input"
+            type="text"
+            id="email"
+            name="email"
+            value={ email }
+            data-testid="input-gravatar-email"
+            onChange={ this.handleChange }
+          />
+        </label>
+        <button
+          className="login-button"
+          type="button"
+          data-testid="btn-play"
+          disabled={ disabled }
+          onClick={ () => this.handleClick() }
+        >
+          PLAY
+        </button>
+      </form>
+    );
+  }
+
+  footer() {
+    return (
+      <footer className="login-footer">
+        <Link
+          className="login-footer-link"
+          data-testid="btn-settings"
+          to="/settings"
+        >
+          SETTINGS
+        </Link>
+      </footer>
+    );
+  }
+
+  render() {
     return (
       <div className="login-root">
-        <img
-          src="assets/logo.png"
-          className="login-logo"
-          alt="logo trivia star"
-        />
-        <form className="login-form">
-          <label className="login-label" htmlFor="name">
-            NAME:
-            <input
-              className="login-input"
-              type="text"
-              id="name"
-              name="userName"
-              value={userName}
-              data-testid="input-player-name"
-              onChange={this.handleChange}
-            />
-          </label>
-          <label className="login-label" htmlFor="email">
-            EMAIL:
-            <input
-              className="login-input"
-              type="text"
-              id="email"
-              name="email"
-              value={email}
-              data-testid="input-gravatar-email"
-              onChange={this.handleChange}
-            />
-          </label>
-          <button
-            className="login-button"
-            type="button"
-            data-testid="btn-play"
-            disabled={disabled}
-            onClick={() => this.handleClick()}
-          >
-            PLAY
-          </button>
-        </form>
-        <footer className="login-footer">
-          <Link
-            className="login-footer-link"
-            data-testid="btn-settings"
-            to="/settings"
-          >
-            SETTINGS
-          </Link>
-        </footer>
+        { this.headerImg() }
+        { this.userFormLogin() }
+        { this.footer() }
       </div>
     );
   }
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  sendUserData: (name, email, token) =>
-    dispatch(getUserData(name, email, token)),
+  sendUserData: (name, email, token) => dispatch(getUserData(name, email, token)),
 });
 
 Login.propTypes = {

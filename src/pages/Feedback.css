@@ -4,32 +4,31 @@
 }
 
 .feedback-message {
-  font-family: cursive;
-  font-weight: bold;
-  font-size: 30px;
   color: rgb(77, 17, 108);
+  font-family: cursive;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .feedback-buttons {
   display: flex;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
 }
 
-.feedback-ranking,
-.feedback-play-again {
+.feedback-ranking, .feedback-play-again {
+  background-color: rgb(117, 149, 255);
+  border: 3px solid rgb(34, 50, 189);
   border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: cursive;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
   padding: 5px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 20px;
-  background-color: rgb(117, 149, 255);
-  border: 3px solid rgb(34, 50, 189);
-  font-family: cursive;
-  font-weight: bold;
-  font-size: 18px;
-  color: white;
-  cursor: pointer;
 }
 
 .feedback-ranking {

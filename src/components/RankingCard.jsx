@@ -1,9 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import Avatar from "../components/Avatar";
-import "./RankingCard.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Avatar from './Avatar';
+import './RankingCard.css';
 
 class RankingCard extends React.Component {
   render() {
@@ -13,7 +11,7 @@ class RankingCard extends React.Component {
       <div className="ranking-card">
         <header className="ranking-card-header">
           <div className="ranking-card-user">
-            <Avatar userName={userName} gravatarImage={gravatarImage} />
+            <Avatar userName={ userName } gravatarImage={ gravatarImage } />
             <p
               className="ranking-card-user-name"
               data-testid="header-player-name"
@@ -27,7 +25,7 @@ class RankingCard extends React.Component {
               {score}
             </p>
             <p data-testid="ranking-card-total-question">
-              {assertions ? `Assertions: ${assertions}` : ""}
+              { assertions ? `Assertions: ${assertions}` : ''}
             </p>
           </div>
         </header>
@@ -40,7 +38,7 @@ RankingCard.propTypes = {
   userName: PropTypes.string.isRequired,
   gravatarImage: PropTypes.string.isRequired,
   score: PropTypes.number.isRequired,
-  assertions: PropTypes.any,
+  assertions: PropTypes.string.isRequired,
 };
 
 export default RankingCard;

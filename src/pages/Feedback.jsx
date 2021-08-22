@@ -1,22 +1,22 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import "./Feedback.css";
-import RankingCard from "../components/RankingCard";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import './Feedback.css';
+import RankingCard from '../components/RankingCard';
 
 class Feedback extends React.Component {
   feedbackMessage() {
-    const state = JSON.parse(localStorage.getItem("state"));
+    const state = JSON.parse(localStorage.getItem('state'));
     const NUMBER_TREE = 3;
     if (state.player.assertions < NUMBER_TREE) {
-      return "You'll do better next time!";
+      return 'You\'ll do better next time!';
     }
-    return "VERY GOOD!";
+    return 'VERY GOOD!';
   }
 
   render() {
-    const state = JSON.parse(localStorage.getItem("state"));
+    const state = JSON.parse(localStorage.getItem('state'));
     const { userName, gravatarImage } = this.props;
     return (
       <>
@@ -27,10 +27,10 @@ class Feedback extends React.Component {
         />
 
         <RankingCard
-          userName={userName}
-          gravatarImage={gravatarImage}
-          score={state.player.score}
-          assertions={state.player.assertions}
+          userName={ userName }
+          gravatarImage={ gravatarImage }
+          score={ state.player.score }
+          assertions={ state.player.assertions }
         />
         <p className="feedback-message" data-testid="feedback-text">
           {this.feedbackMessage()}

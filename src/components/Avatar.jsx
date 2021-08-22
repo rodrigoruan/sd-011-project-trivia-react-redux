@@ -1,55 +1,59 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import "./Avatar.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Avatar.css';
 
 class Avatar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { status: "loading" };
+    this.state = { status: 'loading' };
   }
 
   componentDidMount() {
     const { gravatarImage } = this.props;
     const image = new Image();
 
-    image.onload = () => this.setState({ status: "loaded" });
-    image.onerror = () => this.setState({ status: "error" });
+    image.onload = () => this.setState({ status: 'loaded' });
+    image.onerror = () => this.setState({ status: 'error' });
 
     image.src = gravatarImage;
   }
 
   render() {
     const { status } = this.state;
-    const { userName, gravatarImage, className = "" } = this.props;
+    const { userName, gravatarImage, className = '' } = this.props;
 
-    if (status === "loading") {
-      return <div className={`${className} avatar-loading`} />;
+    if (status === 'loading') {
+      return (
+        <div
+          data-testid="header-player-name"
+          className={ `${className} avatar-loading` }
+        />);
     }
 
-    if (status === "error") {
+    if (status === 'error') {
       return (
         <img
-          className={`${className} avatar-image`}
+          className={ `${className} avatar-image` }
+          data-testid="header-profile-picture"
           src="/assets/aang.png"
-          alt={userName}
+          alt={ userName }
         />
       );
     }
 
     return (
       <img
-        className={`${className} avatar-image`}
+        className={ `${className} avatar-image` }
         data-testid="header-profile-picture"
-        src={gravatarImage}
-        alt={userName}
+        src={ gravatarImage }
+        alt={ userName }
       />
     );
   }
 }
 
 Avatar.propTypes = {
-  className: PropTypes.string,
+  className: PropTypes.string.isRequired,
   userName: PropTypes.string.isRequired,
   gravatarImage: PropTypes.string.isRequired,
 };

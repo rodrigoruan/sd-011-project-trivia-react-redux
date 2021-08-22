@@ -1,18 +1,18 @@
-import React from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import { restartGame } from "../actions";
-import RankingCard from "../components/RankingCard";
-import "./Ranking.css";
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { restartGame } from '../actions';
+import RankingCard from '../components/RankingCard';
+import './Ranking.css';
 
 class Ranking extends React.Component {
   constructor(props) {
     super(props);
     const { userName, gravatarImage } = props;
 
-    const state = JSON.parse(localStorage.getItem("state"));
-    const ranking = JSON.parse(localStorage.getItem("ranking"));
+    const state = JSON.parse(localStorage.getItem('state'));
+    const ranking = JSON.parse(localStorage.getItem('ranking'));
 
     const newRankingPosition = {
       name: userName,
@@ -22,16 +22,16 @@ class Ranking extends React.Component {
 
     if (ranking) {
       const newRanking = [...ranking, newRankingPosition];
-      localStorage.setItem("ranking", JSON.stringify(newRanking));
+      localStorage.setItem('ranking', JSON.stringify(newRanking));
     }
     if (!ranking) {
-      localStorage.setItem("ranking", JSON.stringify([newRankingPosition]));
+      localStorage.setItem('ranking', JSON.stringify([newRankingPosition]));
     }
   }
 
   render() {
     const { playAgain } = this.props;
-    const ranking = JSON.parse(localStorage.getItem("ranking"));
+    const ranking = JSON.parse(localStorage.getItem('ranking'));
     return (
       <>
         <img
@@ -50,11 +50,11 @@ class Ranking extends React.Component {
               {ranking
                 .sort((a, b) => b.score - a.score)
                 .map((item, index) => (
-                  <li key={index}>
+                  <li key={ index }>
                     <RankingCard
-                      userName={item.name}
-                      gravatarImage={item.picture}
-                      score={item.score}
+                      userName={ item.name }
+                      gravatarImage={ item.picture }
+                      score={ item.score }
                     />
                   </li>
                 ))}
@@ -66,7 +66,7 @@ class Ranking extends React.Component {
             className="pretty-button"
             data-testid="btn-go-home"
             to="/"
-            onClick={() => playAgain()}
+            onClick={ () => playAgain() }
           >
             Home
           </Link>

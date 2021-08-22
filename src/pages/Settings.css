@@ -1,15 +1,15 @@
 .settings-img {
   background-color: white;
-  border-radius: 10px;
-  width: 200px;
-  margin-top: 40px;
-  box-shadow: 0 0 5em white;
   border: 10px solid rgb(77, 17, 108);
+  border-radius: 10px;
+  box-shadow: 0 0 5em white;
+  margin-top: 40px;
+  width: 200px;
 }
 
 .settings-text {
-  font-family: monospace;
-  font-weight: bold;
-  font-size: 15px;
   color: rgb(77, 17, 108);
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: 700;
 }

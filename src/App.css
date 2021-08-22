@@ -1,19 +1,19 @@
 body {
-  background-image: url("/assets/yellowBack.svg");
-  background-size: cover;
-  background-position: center center;
   background-attachment: fixed;
+  background-image: url('/assets/yellowBack.svg');
+  background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App {
-  text-align: center;
-  min-height: 100vh;
-  padding: 16px;
+  align-items: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
+  padding: 16px;
+  text-align: center;
 }
 
 .red-border {
@@ -23,17 +23,6 @@ body {
 .green-border {
   border: 1px solid green;
 }
-
-/* .App-header {
-  align-items: center;
-  background-color: #282c34;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  justify-content: center;
-  min-height: 100vh;
-} */
 
 .App-link {
   color: #61dafb;
@@ -48,27 +37,26 @@ body {
 }
 
 .pretty-button {
+  background-color: rgb(117, 149, 255);
+  border: 3px solid rgb(34, 50, 189);
   border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: Architects Daughter , cursive;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
   padding: 5px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 20px;
-  background-color: rgb(117, 149, 255);
-  border: 3px solid rgb(34, 50, 189);
-  font-family: "Architects Daughter", cursive;
-  font-weight: bold;
-  font-size: 18px;
-  color: white;
-  cursor: pointer;
   text-decoration: none;
 }
 
 .pretty-title {
+  color: rgb(117, 149, 255);
   font-family: cursive;
   font-size: 70px;
   letter-spacing: -2px;
   margin: 0;
-  color: rgb(117, 149, 255);
-  text-shadow: -3px 0 rgb(34, 50, 189), 0 3px rgb(34, 50, 189),
-    3px 0 rgb(34, 50, 189), 0 -3px rgb(34, 50, 189);
+  text-shadow: -3px 0 rgb(34, 50, 189) , 0 3px rgb(34, 50, 189) , 3px 0 rgb(34, 50, 189) , 0 -3px rgb(34, 50, 189);
 }

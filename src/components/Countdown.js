@@ -1,13 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 class Countdown extends React.Component {
   render() {
+    const dangerTime = 10;
     const { timer } = this.props;
     return (
       <div>
-        <h3 className={timer <= 10 ? "timer timer-danger" : "timer"}>
+        <h3 className={ timer <= dangerTime ? 'timer timer-danger' : 'timer' }>
           {timer}
         </h3>
       </div>

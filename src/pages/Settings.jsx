@@ -1,5 +1,5 @@
-import React from "react";
-import "./Settings.css";
+import React from 'react';
+import './Settings.css';
 
 class Settings extends React.Component {
   render() {
@@ -19,7 +19,9 @@ class Settings extends React.Component {
           alt="desenho de uma abelha chorando"
         />
         <p className="settings-text">
-          Nothing here. <br />
+          Nothing here.
+          {' '}
+          <br />
           Sorry...
         </p>
       </div>
