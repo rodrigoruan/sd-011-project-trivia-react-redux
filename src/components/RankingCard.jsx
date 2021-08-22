@@ -6,7 +6,6 @@ import './RankingCard.css';
 class RankingCard extends React.Component {
   render() {
     const { userName, gravatarImage, score, assertions } = this.props;
-
     return (
       <div className="ranking-card">
         <header className="ranking-card-header">
@@ -21,11 +20,15 @@ class RankingCard extends React.Component {
           </div>
           <div className="ranking-card-total-score">
             <p>Points:</p>
-            <p className="ranking-card-score" data-testid="header-score">
+            <p
+              className="ranking-card-score"
+              data-testid="header-score"
+            >
               {score}
             </p>
-            <p data-testid="ranking-card-total-question">
-              { assertions ? `Assertions: ${assertions}` : ''}
+            <p>
+              Assertions
+              <span data-testid="feedback-total-question">{` ${assertions}`}</span>
             </p>
           </div>
         </header>

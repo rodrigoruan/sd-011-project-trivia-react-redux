@@ -54,10 +54,9 @@ class Game extends React.Component {
               </div>
             </div>
             <div
-              data-testid="header-score"
               className={ cx('game-user-header-score', success && 'success') }
             >
-              {score}
+              <span data-testid="header-score">{ score }</span>
             </div>
           </div>
           <main>
