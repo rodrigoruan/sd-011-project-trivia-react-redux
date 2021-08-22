@@ -108,7 +108,7 @@ BooleanQuestion.propTypes = {
   showBtn: PropTypes.func.isRequired,
   disabled: (PropTypes.bool).isRequired,
   showAnswer: PropTypes.bool.isRequired,
-  timer: PropTypes.string.isRequired,
+  timer: PropTypes.number.isRequired,
   localStoragePlayerInfo: PropTypes.func.isRequired,
 };
 

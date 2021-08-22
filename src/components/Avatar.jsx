@@ -53,9 +53,14 @@ class Avatar extends React.Component {
 }
 
 Avatar.propTypes = {
-  className: PropTypes.string.isRequired,
-  userName: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  userName: PropTypes.string,
   gravatarImage: PropTypes.string.isRequired,
+};
+
+Avatar.defaultProps = {
+  className: undefined,
+  userName: undefined,
 };
 
 export default Avatar;

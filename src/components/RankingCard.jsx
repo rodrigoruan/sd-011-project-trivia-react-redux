@@ -41,7 +41,11 @@ RankingCard.propTypes = {
   userName: PropTypes.string.isRequired,
   gravatarImage: PropTypes.string.isRequired,
   score: PropTypes.number.isRequired,
-  assertions: PropTypes.string.isRequired,
+  assertions: PropTypes.number,
+};
+
+RankingCard.defaultProps = {
+  assertions: undefined,
 };
 
 export default RankingCard;

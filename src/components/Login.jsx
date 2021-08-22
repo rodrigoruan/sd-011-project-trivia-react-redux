@@ -46,8 +46,8 @@ class Login extends React.Component {
     const { token } = response;
     localStorage.setItem('token', token);
     sendUserData(userName, email, token);
-    const { history } = this.props;
-    history.push('/game');
+    const { history: { push } } = this.props;
+    push('/game');
   }
 
   headerImg() {
@@ -131,7 +131,9 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 Login.propTypes = {
-  history: PropTypes.objectOf(PropTypes.func).isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }).isRequired,
   sendUserData: PropTypes.func.isRequired,
 };
 
