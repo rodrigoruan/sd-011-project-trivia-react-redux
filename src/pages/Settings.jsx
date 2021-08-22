@@ -13,7 +13,7 @@ class Settings extends React.Component {
           <h1 className="pretty-title" data-testid="settings-title">Settings</h1>
         </header>
         <main className="setting-options">
-          <SettingOptions history={ push } />
+          <SettingOptions push={ push } />
         </main>
       </>
     );
