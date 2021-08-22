@@ -80,7 +80,7 @@ class Question extends React.Component {
 
   render() {
     const { questions, showBtn, currentQuestion, nextQuestion, push } = this.props;
-    const maxQuestions = 4;
+    const maxQuestions = questions.length - 1;
     return (
       <section className="game-card">
         {questions[currentQuestion] ? (

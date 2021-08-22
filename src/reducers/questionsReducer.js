@@ -1,4 +1,5 @@
 import {
+  SELECT_API_OPTIONS,
   REQUEST_QUESTIONS,
   RECEIVE_QUESTIONS,
   SHOW_NEXT_BTN,
@@ -8,6 +9,12 @@ import {
 
 const INITIAL_STATE = {
   response_code: '',
+  apiOptions: {
+    numberOfQuestions: '5',
+    category: '',
+    difficulty: '',
+    questionType: '',
+  },
   results: [],
   isFetching: false,
   currentQuestion: 0,
@@ -16,6 +23,16 @@ const INITIAL_STATE = {
 
 const questionsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+  case SELECT_API_OPTIONS:
+    return {
+      ...state,
+      apiOptions: {
+        numberOfQuestions: action.numberOfQuestions,
+        category: action.category,
+        difficulty: action.difficulty,
+        questionType: action.questionType,
+      },
+    };
   case REQUEST_QUESTIONS:
     return {
       ...state,

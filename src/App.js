@@ -14,7 +14,7 @@ export default function App() {
       <Switch>
         <Route path="/ranking" render={ () => <Ranking /> } />
         <Route path="/feedback" render={ () => <Feedback /> } />
-        <Route path="/settings" render={ () => <Settings /> } />
+        <Route path="/settings" render={ (props) => <Settings { ...props } /> } />
         <Route path="/game" render={ (props) => <Game { ...props } /> } />
         <Route exact path="/" render={ (props) => <Login { ...props } /> } />
       </Switch>

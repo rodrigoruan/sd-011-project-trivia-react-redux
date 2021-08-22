@@ -15,9 +15,9 @@ class Game extends React.Component {
   }
 
   componentDidMount() {
-    const { questionsToStore } = this.props;
+    const { dispatch, apiOptions } = this.props;
     const token = localStorage.getItem('token');
-    questionsToStore(token);
+    dispatch(requestApiQuestions(token, apiOptions));
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -68,25 +68,32 @@ class Game extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  questionsToStore: (token) => dispatch(requestApiQuestions(token)),
-});
-
 const mapStateToProps = (state) => ({
   showBtn: state.questionsReducer.showBtn,
+  apiOptions: state.questionsReducer.apiOptions,
   userName: state.loginReducer.name,
 });
 
 Game.propTypes = {
   showBtn: PropTypes.bool.isRequired,
-  userName: PropTypes.string.isRequired,
-  questionsToStore: PropTypes.func.isRequired,
+  userName: PropTypes.string,
+  dispatch: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func,
   }).isRequired,
+  apiOptions: PropTypes.shape({
+    numberOfQuestions: PropTypes.string,
+    category: PropTypes.string,
+    difficulty: PropTypes.string,
+    questionType: PropTypes.string,
+  }).isRequired,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Game);
+Game.defaultProps = {
+  userName: undefined,
+};
+
+export default connect(mapStateToProps)(Game);
 
 // A imagem do perfil vinda do Gravatar em um elemento que deve possuir o atributo data-testid com o valor header-profile-picture
 // O nome da pessoa em um elemento que deve possuir o atributo data-testid com o valor header-player-name

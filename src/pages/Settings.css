@@ -13,3 +13,29 @@
   font-size: 15px;
   font-weight: 700;
 }
+
+.setting-options {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.setting-options label {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.setting-options label select {
+  padding: 5px;
+  width: 300px;
+}
+
+.setting-options label input {
+  padding: 5px;
+  width: 300px;
+}
+
+.setting-options button {
+  padding: 10px;
+}
