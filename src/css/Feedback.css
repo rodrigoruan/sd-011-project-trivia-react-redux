@@ -1,0 +1,85 @@
+.btn-play-again {
+  background-color: #eee;
+  border-radius: 4px;
+  color: #252525;
+  font-size: 20px;
+  margin-left: 10px;
+  padding: 2px 7px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.btn-play-again:hover {
+  background-color: #252525;
+  color: #eee;
+  transition: 0.5s;
+}
+
+.btn-ranking {
+  background-color: #eee;
+  border-radius: 4px;
+  color: #252525;
+  font-size: 20px;
+  margin-left: 10px;
+  padding: 2px 7px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.btn-ranking:hover {
+  background-color: #252525;
+  color: #eee;
+  transition: 0.5s;
+}
+
+.feedback-items {
+  color: #161b22;
+  font-size: 16px;
+}
+
+.feedback-container {
+  border: 3px solid #252525;
+  border-radius: 6px;
+  margin: 50px auto 0;
+  padding-top: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.feedback-header {
+  align-items: center;
+  background-color: #252525;
+  color: #eee;
+  display: flex;
+  font-size: 30px;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.feedback-header > img {
+  margin-bottom: 8px;
+  margin-top: 10px;
+  width: 150px;
+}
+
+.feedback-gravatar {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.feedback-score {
+  color: #252525;
+  font-size: 20px;
+}
+
+.feedback-name {
+  color: #252525;
+  font-size: 25px;
+}
+
+.feedback-text {
+  color: #252525;
+  font-size: 20px;
+}

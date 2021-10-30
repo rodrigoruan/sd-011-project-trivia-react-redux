@@ -1,0 +1,57 @@
+body {
+  background-color: #eee;
+}
+
+.game-container {
+  text-align: center;
+}
+
+.answer-button {
+  border: 1px solid #252525;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 5px 30px;
+  transition: 0.5s;
+}
+
+.answer-button:hover {
+  background-color: #252525;
+  color: #eee;
+  transition: 0.5s;
+}
+
+.timer {
+  color: #252525;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.next-button {
+  background-color: none;
+  border: 1px solid #252525;
+  border-radius: 4px;
+  color: #252525;
+  cursor: pointer;
+  display: block;
+  margin: 15px auto 0;
+  padding: 5px 30px;
+  transition: 0.5s;
+}
+
+.next-button:hover {
+  background-color: #252525;
+  border: 1px solid #252525;
+  border-radius: 4px;
+  color: #eee;
+}
+
+p:nth-child( 1 ) {
+  color: #252525;
+  font-size: 27px;
+}
+
+p:nth-child( 2 ) {
+  color: #252525;
+  font-size: 18px;
+}

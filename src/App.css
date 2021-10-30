@@ -3,8 +3,48 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 30vmin;
+  margin-top: 60px;
   pointer-events: none;
+}
+
+.enter-button {
+  background-color: #252525;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  color: #eee;
+  cursor: pointer;
+  margin-top: 8px;
+  padding: 5px 45px;
+  transition: 0.5s;
+}
+
+.enter-button:hover {
+  background-color: #eee;
+  color: #252525;
+  transition: 0.5s;
+}
+
+.configuration {
+  color: #eee;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.configuration:hover {
+  color: black;
+  transition: 0.5s;
+}
+
+.input-text {
+  background-color: #eee;
+  border: 1px solid #252525;
+  border-radius: 4px;
+  color: #252525;
+  margin-top: 5px;
+  padding: 5px 25px;
+  text-align: center;
 }
 
 .red-border {
@@ -15,43 +55,16 @@
   border: 1px solid green;
 }
 
-@media ( prefers-reduced-motion : no-preference ) {
-
-  .App-logo {
-    animation: shake infinite 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  }
-}
-
 .App-header {
   align-items: center;
-  background-color: #282c34;
+  background-color: #252525;
   color: white;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
-  justify-content: center;
   min-height: 100vh;
 }
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes shake {
-
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
-
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
 }
